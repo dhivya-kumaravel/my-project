@@ -11,7 +11,7 @@ const CreateJob = () => {
         const onSubmit = (data) => {
             data.skills = selectedOption;
             // console.log(data);
-            fetch("http://localhost:5000/post-job", {
+            fetch("jobs.json", {
                 method: "POST",
                 headers: {"Content-Type": "application/json"},
                 body: JSON.stringify(data)
