@@ -86,7 +86,7 @@ const Home = () => {
   };
      const result  = filteredData(jobs, selectedCategory, query);
   return (
-    <div className=''>
+    <div>
         <Banner query={query} handleInputChange={handleInputChange} />
 
         {/* main content */}
