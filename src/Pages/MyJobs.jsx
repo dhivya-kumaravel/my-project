@@ -13,7 +13,7 @@ const MyJobs = () => {
 
   useEffect(() => {
     setIsLoading(true);
-    fetch('http://localhost:5000/myJobs/jdfd@gmail.com').then(res => res.json())
+    fetch('jobs.json').then(res => res.json())
     .then(data => {setJobs(data);
       setIsLoading(false);
   }) }, [searchText]) ;
@@ -44,7 +44,7 @@ const MyJobs = () => {
     setIsLoading(false);
   }
   const handleDelete = (id) => {
-    fetch("http://localhost:5000/job/${id}", {method: "DELETE"}).then(res => res.json).then(data => {
+    fetch("jobs.json", {method: "DELETE"}).then(res => res.json).then(data => {
       if(data.acknowledged === true){
         alert("Job Deleted Successfully!!!"); }
     })
