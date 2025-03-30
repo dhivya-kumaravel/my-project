@@ -20,7 +20,9 @@ const Navbar = () => {
             
                 <div className='flex items-center gap-2'><img className='w-8 h-8 pl-2' src="./images/employee.png" alt="logo" />
                 <a className = "text-red-500 font-bold italic" href="/">Job Portal</a></div>
-                <div className='flex flex-wrap'><ul className='md:flex gap-12'>{
+                <div className='flex flex-wrap'>
+                  
+                  <ul className='md:flex gap-12'>{
                     navItems.map(({path, title}) => (<li key={path}>
                         <NavLink
                     to={path}

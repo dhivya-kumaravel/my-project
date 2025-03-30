@@ -14,7 +14,7 @@ const Home = () => {
     const itemsPerPage = 6;
     useEffect(() => {
       setIsLoading(true);
-        fetch("http://localhost:5000/all-jobs")
+        fetch("jobs.json")
         .then(res => res.json())
         .then(data => {setJobs(data); 
           setIsLoading(false);});
@@ -28,7 +28,7 @@ const Home = () => {
   const handleChange = (event) => {
     setSelectedCatagory(event.target.value);
   }
-
+       
   const handleClick = (event) => {
     setSelectedCatagory(event.target.value);
   }
