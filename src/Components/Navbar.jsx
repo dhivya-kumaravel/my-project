@@ -36,7 +36,7 @@ const Navbar = () => {
                     }</ul></div>
                     <div className='text-base text-primary font-medium space-x-5 lg:black'>
                         <Link className="py-2 px-5 border rounded" to = "/login">Login</Link>
-                        <Link className="py-2 px-5 border rounded bg-blue-600 text-white" to = "/sign-up">Track Here</Link>
+                        {/* <Link className="py-2 px-5 border rounded bg-blue-600 text-white" to = "/sign-up">Track Here</Link> */}
                     </div>
                     <div>
                         <button className='hidden' onClick={handleMenuToggler}>
