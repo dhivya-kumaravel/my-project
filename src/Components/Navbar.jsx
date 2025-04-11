@@ -12,6 +12,7 @@ const Navbar = () => {
     {path: "/my-job", title: "My Jobs"},
     {path: "/salary", title: "Salary estimate"},
     {path: "/post-job", title: "Post Job here"},
+    {path: "/track-here", title: "Track Here"}
     ]
     
   return (
@@ -35,7 +36,7 @@ const Navbar = () => {
                     }</ul></div>
                     <div className='text-base text-primary font-medium space-x-5 lg:black'>
                         <Link className="py-2 px-5 border rounded" to = "/login">Login</Link>
-                        <Link className="py-2 px-5 border rounded bg-blue-600 text-white" to = "/sign-up">SignUp</Link>
+                        <Link className="py-2 px-5 border rounded bg-blue-600 text-white" to = "/sign-up">Track Here</Link>
                     </div>
                     <div>
                         <button className='hidden' onClick={handleMenuToggler}>
