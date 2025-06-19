@@ -19,6 +19,7 @@ const Card = ({data}) => {
             <span className='flex items-center gap-2'><FiDollarSign/> {minPrice}-{maxPrice}k</span>
             <span className='flex items-center gap-2'><FiCalendar/> {postingDate}</span></div>
             <p className='text-base text-primary/70'>{description}</p>
+            <button className='border p-2 m-2 bg-blue-400 text-yellow-300 hover:bg-green-300 hover:text-black'>Apply</button>
             
 
         </div>
