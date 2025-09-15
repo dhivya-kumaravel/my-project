@@ -6,6 +6,7 @@ import MyJobs from "../Pages/MyJobs.jsx";
 import Login from "../Components/Login.jsx";
 import SignUp from "../Components/SignUp.jsx";
 import Track from "../Components/Track.jsx";
+import CreateProfile from "../Components/CreateProfile.jsx";
 
 const router = createBrowserRouter([
     {
@@ -16,7 +17,9 @@ const router = createBrowserRouter([
       {path: "/my-job",  element: <MyJobs/>},
       {path:"/login", element: <Login/>},
       {path:"/signup", element: <SignUp/>},
-      {path:"/track-here", element:<Track/>}
+      {path:"/track-here", element:<Track/>},
+      {path:"/create-profile", element:<CreateProfile/>}
+      
 
       ]
     },

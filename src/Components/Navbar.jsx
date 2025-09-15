@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 import { Link, NavLink } from 'react-router-dom'
 import { FaBars, FaXmark } from "react-icons/fa6";
 
+
+
 const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen]=useState(false)
     const handleMenuToggler=()=>{
@@ -10,16 +12,22 @@ const Navbar = () => {
     const navItems = [
     {path: "/", title: "Search"},
     {path: "/my-job", title: "My Jobs"},
-    {path: "/salary", title: "Salary estimate"},
+    {path: "/create-profile", title: "Create Profile"},
     {path: "/post-job", title: "Post Job here"},
-    {path: "/track-here", title: "Track Here"}
-    ]
+    {path: "/track-here", title: "Track Here"}]
+
+
+  
+
+    
+ 
+ 
     
   return (
+    
     <header className='max-w-screen-2xl container mx-auto xl:px-24 px-4'>
         <nav className='flex justify-between items-center py-6 flex-wrap'>
-            
-                <div className='flex items-center gap-2'><img className='w-8 h-8 pl-2' src="./images/employee.png" alt="logo" />
+          <div className='flex items-center gap-2'><img className='w-8 h-8 pl-2' src="./images/employee.png" alt="logo" />
                 <a className = "text-red-500 font-bold italic" href="/">Job Portal</a></div>
                 <div className='flex flex-wrap'>
                   
@@ -59,6 +67,10 @@ const Navbar = () => {
                   </NavLink>
                     </li>))
                     }</ul>
+                    <div className="space-x-4">
+        <Link to="/create-profile" className="hover:underline">Create Profile</Link>
+      </div>
+      
         </div>
     </header>
   )
