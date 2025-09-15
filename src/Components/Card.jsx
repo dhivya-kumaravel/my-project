@@ -1,12 +1,17 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom';
 import {FiCalendar, FiClock, FiDollarSign, FiMapPin} from 'react-icons/fi'
 
 const Card = ({data}) => {
     const {companyName, companyLogo, jobTitle, minPrice, maxPrice, SalaryType, 
         jobLocation, employmentType, postingDate, description} = data;
-
+const [buttonText, setButtonText]= useState("Apply")
+const handleClick = () => {
+        setButtonText("Applied")
+    }
   return (
+    
+    
     <section className='card'>
         <Link to={"/"} className='flex gap-4 flex-col sm:flex-row items-start'>
         <img src={companyLogo} alt="" />
@@ -19,7 +24,7 @@ const Card = ({data}) => {
             <span className='flex items-center gap-2'><FiDollarSign/> {minPrice}-{maxPrice}k</span>
             <span className='flex items-center gap-2'><FiCalendar/> {postingDate}</span></div>
             <p className='text-base text-primary/70'>{description}</p>
-            <button className='border p-2 m-2 bg-blue-400 text-yellow-300 hover:bg-green-300 hover:text-black'>Apply</button>
+            <button className='border p-2 m-2 bg-blue-400 text-yellow-300 hover:bg-green-300 hover:text-black' onClick={()=>handleClick()}>{buttonText}</button>
             
 
         </div>
